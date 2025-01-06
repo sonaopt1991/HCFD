@@ -1,0 +1,136 @@
+/* General body styling with background image */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+    background-image: url('/static/images/image.jpg');  /* Add the background image here */
+    background-size: cover;                         /* Ensure the image covers the entire page */
+    background-position: center center;             /* Center the image */
+    background-attachment: fixed;                   /* Keeps the image fixed when scrolling */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* Container to center content */
+.container {
+    width: 80%;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    opacity: 0.9; /* Adds slight transparency to the container to make the background visible */
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #007bff;
+}
+
+/* Section for data display */
+.data-frame {
+    text-align: center;
+}
+
+h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Styling the table */
+.table-container {
+    overflow-x: auto;  /* Makes the table horizontally scrollable if it's too wide */
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    font-size: 1.1em;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Styling the download button */
+.download-button {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.download-button .button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    font-size: 1.1em;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.download-button .button:hover {
+    background-color: #218838;
+}
+
+.download-button .button:active {
+    background-color: #1e7e34;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .table-container {
+        margin-top: 20px;
+    }
+
+    table {
+        font-size: 1em;
+    }
+
+    .download-button .button {
+        font-size: 1em;
+    }
+}
