@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Provider Fraud Detection</title>
+    <link rel="stylesheet" href="/static/css/Results.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Healthcare Provider Fraud Detection</h1>
+        </header>
+        
+        <main>
+            <div class="data-frame">
+                <h2>Analysis Results</h2>
+                
+                <!-- Table displaying the dataframe -->
+                <div class="table-container">
+                    <!-- Inject the DataFrame HTML table here -->
+                    {{ table_html|safe }}
+                </div>
+                
+                <!-- Button to download CSV -->
+                <div class="download-button">
+                    <a href="/download" class="button">Download as CSV</a>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
