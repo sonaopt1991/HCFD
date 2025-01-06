@@ -10,22 +10,22 @@ from io import BytesIO
 app = Flask(__name__)
 
 # Load the encoders, scaler, and model
-with open('pickled files/onehotencoder.pkl', 'rb') as file:
+with open('onehotencoder.pkl', 'rb') as file:
     onehotencoder = pickle.load(file)
 
-with open('pickled files/ordinalencoder.pkl', 'rb') as file:
+with open('ordinalencoder.pkl', 'rb') as file:
     ordinalencoder = pickle.load(file)
 
-with open('pickled files/freq_map.pkl', 'rb') as file:
+with open('freq_map.pkl', 'rb') as file:
     loaded_freq_maps = pickle.load(file)
 
-with open('pickled files/scaler1.pkl', 'rb') as file:
+with open('scaler1.pkl', 'rb') as file:
     scaler1 = pickle.load(file)
 
-with open('pickled files/xgb_model4.pkl', 'rb') as file:
+with open('xgb_model4.pkl', 'rb') as file:
     xgb_model4 = pickle.load(file)
 
-with open('pickled files/encoder1.pkl', 'rb') as file:
+with open('encoder1.pkl', 'rb') as file:
     label_encoder = pickle.load(file)
 
 
@@ -86,8 +86,8 @@ def upload_file():
         test_data = pd.read_csv(file)
         df = test_data.copy()
        # Load the mapping files
-        provider_mapping = pd.read_csv('csv/provider_mapping.csv')
-        target_encoding_mapping = pd.read_csv('csv/beneid_targetencoded.csv')
+        provider_mapping = pd.read_csv('provider_mapping.csv')
+        target_encoding_mapping = pd.read_csv('beneid_targetencoded.csv')
         global_mean = 0.3812106891480103
  
 
